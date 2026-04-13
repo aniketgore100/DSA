@@ -8,12 +8,12 @@ const twoSum = (nums, target) =>{
             console.log(`Pair found: ${map.get(diff)}, ${i}`);
         }
         console.log("nums[i]: ", i, nums[i]);
-        map.set(i, nums[i]);
+        map.set( nums[i], i);
     }
 }
 
 
-let sum = [2,7,11,15];
-let target = 9;
+let sum = [2,3,4];
+let target = 6;
 let result = twoSum(sum, target);
 console.log(result);

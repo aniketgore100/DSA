@@ -9,7 +9,7 @@ const largest = (arr) =>{
             max = arr[i];
         }
     }
-    return max;
+    return max; 
 }
 
 

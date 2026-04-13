@@ -1,20 +1,23 @@
 
 
-const secondLargest = (arr) =>{
-    let max = arr[0];
-    let secondMax = arr[0];
-    for(let i = 0; i<arr.length; i++){
-          console.log("secondMax outside the if : ", secondMax);
-        if(arr[i] > max){            
-            secondMax = max;
-            max = arr[i];
-           console.log("max outside the if : ", max);
+
+const secondLargest = (arr) => {
+    let secondL = 0;
+    let largest = arr[0];
+    for(let i = 1; i<arr.length; i++){
+        if(arr[i] > largest){
+        secondL = largest;
+        largest = arr[i];
+        }else if(arr[i] < largest && arr[i] > secondL){
+            secondL = arr[i];
         }
     }
-    return secondMax;
+    return secondL;
 }
 
 
-let arr = [3,5,1,4,2,0];
+let arr = [10,10, 5, 8];
 let result = secondLargest(arr);
-console.log(result);
+console.log("result => ", result);
+
+
