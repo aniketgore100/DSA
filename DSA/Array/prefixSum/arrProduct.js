@@ -18,7 +18,7 @@ const productArr = (arr) => {
 }
 
 
-let arr = [8,9,10,11];
+let arr = [1,2,3,4,5];
 
 console.log(productArr(arr));
 

@@ -1,34 +1,22 @@
+const continuousArray = (arr) => {
 
+   let res = 0; let sum = 0; let map = new Map();
 
-
-const maxSubArray = (arr) => {
-    let map = new Map();
-    map.set(0,-1);
-
-    let n = arr.length;
-    let sum = 0;
-    let maxlen = 0;
-
-    for(let i = 0; i < n; i++){
-        if(arr[i] == 0){
-            arr[i] = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == 0) {
+            Arr[i] = -1;
         }
     }
 
-    for(let i = 0; i<n; i++){
-        sum += arr[i];
-        if(map.has(sum)){
-           let accurance =  map.get(sum);
-           let len = i - accurance;
-           if(len > maxlen){
-            maxlen = len;
-           }
+    for (let i = 0; i < arr.length; i++) {
+        Sum += arr[i];
+        if (map.has(sum)) {
+            Res = Math.max(res, (i - map.get(sum)));
         }
         map.set(sum, i);
     }
-    return maxlen;
+
+    return sum;
+
 }
 
-
-let arr = [0,1,1,1,1,1,0,0,0];
-console.log(maxSubArray(arr));
